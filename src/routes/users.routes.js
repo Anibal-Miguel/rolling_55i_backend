@@ -116,7 +116,7 @@ export const usersRoutes = ()  => {
                 if (user === null) {
                     res.status(404).send({ status: 'ERR', data: 'No existe usuario con ese ID' })
                 } else {
-                    res.status(200).send({ status: 'OK', data: filterData (foundUser._doc, ['password']) })
+                    res.status(200).send({ status: 'OK', data: user })
                 }
             } else {
                 res.status(400).send({ status: 'ERR', data: 'Formato de ID no válido' })
